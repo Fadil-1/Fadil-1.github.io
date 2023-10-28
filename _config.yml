@@ -5,7 +5,7 @@ description: > # Meta description of Homepage
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "/fadil-1.github.io" # My base url: Must match my repo name.
+baseurl: "home" # My base url: Must match my repo name.
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: /:categories/:year/:month/:day/:title/ # Structures projects in _posts so that they can be placed into sub directories.

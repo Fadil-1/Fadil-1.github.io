@@ -27,20 +27,23 @@ layout: compress
     <div class="underline-flex" >
       {% for items  in site.posts %}
 
-      {% if items.similar == "8-bit_bb_cpu" %}
-      {% if items.category == "parent" %}
-      <div><a class="anchor-text" id="nav-link" href="{{ items.url | relative_url  }}"><b>{{items.title}} </a></b></div>
-        <br>
-        <h2>{{items.overview}}</h2>
-        {% for i in items.parent_nav %}
-        <li class="children_category">{{i.category}}</li>
-        <li><a class="children-nav" id="nav-link" href="{{ i.permalink | relative_url  }}">{{i.name}}</a></li>
-        {% endfor %} 
-        {% endif %}
-        {% endif %}
-        {% endfor %}
-    </div>
-  </div>
+      {% if items.similar == "8-bit_bb_cpu" and items.category == "parent" %}
+      <div><a class="anchor-text" id="nav-link" href="{{ items.url | relative_url }}"><b>{{ items.title }}</b></a></div>
+      <br>
+      <h2>{{ items.overview }}</h2>
+      {% for i in items.parent_nav %}
+        <li class="children_category">
+          {% if i.image %}
+            <img src="{{ 'assets/img/posts/8-bit_bb_cpu' | append: i.image }}" alt="{{ i.name }}" style="height: 20px;"/>
+          {% endif %}
+          <a class="children-nav" id="nav-link" href="{{ i.permalink | relative_url }}">{{ i.name }}</a>
+        </li>
+      {% endfor %}
+    {% endif %}
+
+  {% endfor %}
+</div>
+</div>
   
   <!-- Main content -->
   <div id="content" class="content">

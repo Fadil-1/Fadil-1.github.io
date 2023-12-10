@@ -11,195 +11,87 @@ parent_url: /8-bit_breadboard_computer/
 permalink: /projects/8-bit_breadboard_CPU/
 summary: Radio space debris tracker. 
 parent_nav:
-  - name: RAM
-    permalink: /projects/8-bit_breadboard_CPU/RAM
+  - name: 📇 Nomenclatures
+    permalink: /projects/8-bit_breadboard_CPU/Nomenclatures
+  - name: ⛰️ Basics
+    permalink: /projects/8-bit_breadboard_CPU/Basics
+  - name: ⏰ Clock
+    permalink: /projects/8-bit_breadboard_CPU/Clock
+  - name: 🚌 Bus & General Purpose Registers
+    permalink: /projects/8-bit_breadboard_CPU/CU
   - name: ➗ ALU
     permalink: /projects/8-bit_breadboard_CPU/ALU
-  - name: Registers
-    permalink: /projects/8-bit_breadboard_CPU/registers
-  - name: Control Logic
-    permalink: /projects/8-bit_breadboard_CPU/CU
+  - name: Memory
+    bold: true
+    image: ram/RAM.png
+  - name: RAM & ROM Primer
+    permalink: /projects/8-bit_breadboard_CPU/RAM & ROM Primer
+    parent: Memory
+  - name: RAM
+    permalink: /projects/8-bit_breadboard_CPU/RAM 
+    parent: Memory
+  - name: EPROM Programmer
+    permalink: /projects/8-bit_breadboard_CPU/EPROM Programmer
+  - name: 🖵 🖥️ Numerical Display
+    permalink: /projects/8-bit_breadboard_CPU/Numerical Display
 ---
 
-<!-- Include the title of the project on the p tag, and include the class "sticky" -->
+# Overview
 
+# NOTES
 
+Nothing here is plagiarized. I checked and refined everything. Only  some proof reading for corrections and what is in the TODO block is left to do!
 
-## Hello world, welcome to my website. Hello world, welcome to my website. Hello world, welcome to my website. Hello world, welcome to my website. Hello world, welcome to my website. Hello world, welcome to my website.
-## Hello world, welcome to my website.
-## Hello world, welcome to my website.
+# TODO:
 
+1- Add big shoutout to DerULF1 here instead of small shoutouts in many posts.
 
+2- Either replace the build pic below with a high quality gif or video(That is naturally embedded in the markdown as a gif or image would). Or a high res image taken with the Olympus camera(If it looks better than the iphone’s).
 
-![text]({{ site.url }}{{ site.baseurl }}/assets/img/posts/lm555.png)
+3- Add Instruction set info, in an organized and professional fashion(Mention access types direct, immediate…). Mention Branching types, special instructions, whatever.; give plenty of details with more pics if it helps
 
+4- take a shot at making an actual overall shcematic of the build with that software on lLinux, which I used to make the SAP-1’s schematic in the RAM chapter.
 
-## Hello world welcome to my website
+5- In case I make the schematic, keep both that schematic and the breadboard figure ading a note that it is what my schematic would look like throughout the posts
 
-My namr iyfdhjfdlkjhvlkjhg
+6 - G is now E, and E is now I. Already corrected on notability-schematic on Ipad. just replace current picture with updated one  
 
-##### Hello ma lady, how do you do
+Last November, I came across a YouTube post by [Ben Eater](https://www.youtube.com/@BenEater), promoting a Black Friday sale of his [8-bit breadboard CPU kit](https://eater.net/8bit/kits). Having followed his YouTube channel for a while and considering him one of the best educators on the platform, I seized the opportunity and purchased a kit. 
 
-# Overview of Raspberry Pi in general
+His CPU is based off the SAP-1 ([Simple as Possible 1](https://en.wikipedia.org/wiki/Simple-As-Possible_computer)) architecture, as outlined in "Digital Computer Electronics" by Paul Malvino. Throughout Spring 2023, I dedicated my spare time to assembling the kit. I built it, got to the display module, took it apart, and even made a slightly extended version with more RAM before taking that apart too. I have then started a expanded version, which I am going to share in this series of posts. 
 
-#### You are invited to the wedding....
+**That being said, I have to pause here and give a massive shoutout to Ben Eater. The depth and clarity he brings in his video series is unparalleled. Every video he delivers is to me a masterpiece of educational content. Consider this another angle to view the SAP architectures, deeply rooted in the foundation that Ben Eater laid.**
 
-** Hsdlkgfdsflkhjfdlkj **
-## Hello world, welcome to my website.
+**So yes, while my posts add another perspective, they stand on the shoulders of a giant. Ben’s video series is the gold standard, and if you’re aiming to dive deep into the SAP-1, or digital electronics in general, that’s your starting point.**
 
+While assembling and tinkering with my build, I frequently found myself scrolling through the non-official Ben Eater subreddit [r/beneater](https://www.reddit.com/r/beneater/). It’s a community where enthusiasts and learners share their individual builds, exchange insights, and offer support. If you’re building your own CPU and or are looking for advice and feedback on your build, I highly recommend checking out this subreddit. 
 
-## Hello world welcome to my website
+**Also, a notable mention goes to Der_ULF1. His 8-bit CPU series, especially the interrupt handling and PS2 module design, greatly influenced my work. It was exactly what I had in mind, but executed even better. Check out his GitHub [here](https://github.com/DerULF1) and YouTube channel [here](https://www.youtube.com/@DerULF1).**
 
-My namr iyfdhjfdlkjhvlkjhg
+Paul Malvino’s book outlines three simplified [Von Neumann](https://history-computer.com/the-complete-guide-to-von-neumann-architecture/) architectures: SAP-1, SAP-2, and SAP-3, each progressively more complex and capable. My version leans towards the SAP-3, with an **8-bit data bus and 16-bit system/address bus**, adding some additional functionalities. The SAP-1, while accessible, only has a 4-bit program counter and 16-byte of RAM, limiting the complexity of programs it can run. This limitation was a catalyst for my decision to modify and improve the design, aiming for a CPU capable of handling more power-demanding and interesting programs. Plus I hate to see unused areas on my breadboards, and I came to the conclusion that if I was going to spend a considerable amount of time building the CPU, I could have as well made it look nice and more permanent.
 
-##### Hello ma lady, how do you do
+[https://drive.google.com/uc?export=view&id=1J6w5AhHXn8bqoUTQK_zxlKinYP8Q_5Fw](https://drive.google.com/uc?export=view&id=1J6w5AhHXn8bqoUTQK_zxlKinYP8Q_5Fw)
 
-# Overview of Raspberry Pi in general
+My build has the following notable features:
 
-#### You are invited to the wedding....
+- Programmable clock speed(Chosen from 8 different clock speeds)
+- 16-bit program Counter
+- 16-bit stack Pointer
+- Transfer register between data and address bus (termed as the Bridge Register (BR) in codes)
+- 16-bit Output register
+- PS2 keyboard decoder
+- 16-bit 14-segment display(signed and unsigned 16-bit intergers for now)
+- SPI BUS connected to an Adafruit Bluetooth receiver and an SD card slot.
+- 128 x 64 monochrome OLED display
+- 5-digit digital 14-segment display.
+- 48-K-byte of RAM(Remaining 16-k-byte address space is used for an operating system and stack memory)
+- ALU with Shift (LSR LSR) AND, ADD, SUB, OR, XOR
+- 7 flags: Four ALU flags: (Z-O-N-C) in writable 4-bit register; and two interrupt flags.
+- 5 general purpose registers: A, B, C, D, and E
+- 4-bit microcode step counter(With dynamic microsteps reset)
 
-** Hsdlkgfdsflkhjfdlkj **
-## Hello world, welcome to my website.
+[https://drive.google.com/uc?export=view&id=1zukj_0ZykpeB-WHHXUYvnjysiwniDT3_](https://drive.google.com/uc?export=view&id=1zukj_0ZykpeB-WHHXUYvnjysiwniDT3_)
 
-
-## Hello world welcome to my website
-
-My namr iyfdhjfdlkjhvlkjhg
-
-##### Hello ma lady, how do you do
-
-# Overview of Raspberry Pi in general
-
-#### You are invited to the wedding....
-
-** Hsdlkgfdsflkhjfdlkj **
-## Hello world, welcome to my website.
-
-
-## Hello world welcome to my website
-
-My namr iyfdhjfdlkjhvlkjhg
-
-##### Hello ma lady, how do you do
-
-# Overview of Raspberry Pi in general
-
-#### You are invited to the wedding....
-
-** Hsdlkgfdsflkhjfdlkj **
-## Hello world, welcome to my website.
-
-
-## Hello world welcome to my website
-
-My namr iyfdhjfdlkjhvlkjhg
-
-##### Hello ma lady, how do you do
-
-# Overview of Raspberry Pi in general
-
-#### You are invited to the wedding....
-
-** Hsdlkgfdsflkhjfdlkj **
-## Hello world, welcome to my website.
-
-
-## Hello world welcome to my website
-
-My namr iyfdhjfdlkjhvlkjhg
-
-##### Hello ma lady, how do you do
-
-# Overview of Raspberry Pi in general
-
-#### You are invited to the wedding....
-
-** Hsdlkgfdsflkhjfdlkj **
-## Hello world, welcome to my website.
-
-
-## Hello world welcome to my website
-
-My namr iyfdhjfdlkjhvlkjhg
-
-##### Hello ma lady, how do you do
-
-# Overview of Raspberry Pi in general
-
-#### You are invited to the wedding....
-
-** Hsdlkgfdsflkhjfdlkj **
-## Hello world, welcome to my website.
-
-
-## Hello world welcome to my website
-
-My namr iyfdhjfdlkjhvlkjhg
-
-##### Hello ma lady, how do you do
-
-# Overview of Raspberry Pi in general
-
-#### You are invited to the wedding....
-
-** Hsdlkgfdsflkhjfdlkj **
-## Hello world, welcome to my website.
-
-
-## Hello world welcome to my website
-
-My namr iyfdhjfdlkjhvlkjhg
-
-##### Hello ma lady, how do you do
-
-# Overview of Raspberry Pi in general
-
-#### You are invited to the wedding....
-
-** Hsdlkgfdsflkhjfdlkj **
-## Hello world, welcome to my website.
-
-
-## Hello world welcome to my website
-
-My namr iyfdhjfdlkjhvlkjhg
-
-##### Hello ma lady, how do you do
-
-# Overview of Raspberry Pi in general
-
-#### You are invited to the wedding....
-
-** Hsdlkgfdsflkhjfdlkj **
-## Hello world, welcome to my website.
-
-
-## Hello world welcome to my website
-
-My namr iyfdhjfdlkjhvlkjhg
-
-##### Hello ma lady, how do you do
-
-# Overview of Raspberry Pi in general
-
-#### You are invited to the wedding....
-
-** Hsdlkgfdsflkhjfdlkj **
-## Hello world, welcome to my website.
-
-
-## Hello world welcome to my website
-
-My namr iyfdhjfdlkjhvlkjhg
-
-##### Hello ma lady, how do you do
-
-# Overview of Raspberry Pi in general
-
-#### You are invited to the wedding....
-
-** Hsdlkgfdsflkhjfdlkj **
-
-<!-- Copy the code and change to the date you created a project or a child project. -->
+Taking into account the considerable number of chips used in my built(A little over a hundred), I opted for the 74HCT(a special version of 74HC) chips family in my build. Ben Eater’s original kit consists of 74LS(Low-power Schottky) TTL chips; and while they are known for their speed, they are also power-intensive. In comparison, the 74HCT family of chips offers a balance between the speed characteristic of TTL and the low power consumption of CMOS circuitry. This was particularly essential given that my build, even with the 74HCT chips, draws about 1.2 amps in idle. Such a power draw, although substantial, would have been significantly higher had I used exclusively 74LS chips. Additionally, the compatibility of 74HCT with 74LS and 74HC(High-speed CMOS ) inputs ensured flexibility, allowing a mix of these chips in the system without any operational concerns.
 
 <i class="fas fa-calendar-alt"></i> <span style="font-size: 15px; font-weight: bolder;">Updated:  </span><time>August 24, 2023</time>

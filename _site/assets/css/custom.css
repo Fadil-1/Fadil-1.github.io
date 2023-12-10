@@ -964,10 +964,40 @@ footer{
 }
 
 
+
+
+.container-main {
+  display: flex;
+  max-width: 1600px; 
+  margin: 0 auto; /*Centers the container on the page */
+}
+
+/* Adjusting the sidebar width and positioning */
+.sidebar {
+  width: 25%; 
+  position: fixed;
+
+}
+
+/* Adjusting the content area */
+.content {
+  flex-grow: 1; /* Allows the content area to fill the remaining space */
+  padding-left: 320px; /* Todo: Adjust based on sidebar width */
+}
+
+/* Additional media queries for larger screens */
+@media screen and (min-width: 1600px) {
+  .container-main {
+    max-width: 2000px; /* Larger max-width for larger screens */
+  }
+}
+
+
+
 /*.content-container {
   max-width: 800px;
-  margin-left: 15px; /* Adjust this value to your preference 
-  margin-right: 0; /* Adjust 16px if needed 
+  margin-left: 15px;
+  margin-right: 0;
   padding: 0 20px;
 }
 
@@ -977,7 +1007,7 @@ footer{
 }
 
 article {
-  max-width: 800px; /* or whatever maximum width you prefer 
+  max-width: 800px; 
   width: 100%;
 }
 */

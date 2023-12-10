@@ -32,7 +32,7 @@ parent_nav:
     parent: Memory
   - name: EPROM Programmer
     permalink: /projects/8-bit_breadboard_CPU/EPROM Programmer
-  - name: 🖵 🖥️ Numerical Display
+  - name: 🖵 Numerical Display
     permalink: /projects/8-bit_breadboard_CPU/Numerical Display
 ---
 

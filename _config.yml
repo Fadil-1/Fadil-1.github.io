@@ -2,9 +2,12 @@
 title: Fadil Isamotu  # your site title
 author: Fadil Isamotu # You :P
 description: > # Meta description of Homepage
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Hello, I'm Fadil. I'm a Master's CS at the Johns Hopkins University. This is my personal website. Here I mainly post
+  projects that I've undertaken with tutorial-like notes. 
+
+  I'm always eager to connect with like-minded individuals and fellow professionals, and anyone interested in the work I do.
+  If you'd like to discuss projects, share ideas, or simply say hello, Feel free to reach out! Connect with me on LinkedIn 
+  and GitHub (links in the footer), or send me an email through the 'Contact' section.  
 baseurl: "/home" # My base url: Must match my repo name.
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 

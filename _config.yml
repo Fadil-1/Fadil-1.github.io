@@ -8,7 +8,7 @@ description: > # Meta description of Homepage
   I'm always eager to connect with like-minded individuals and fellow professionals, and anyone interested in the work I do.
   If you'd like to discuss projects, share ideas, or simply say hello, Feel free to reach out! Connect with me on LinkedIn 
   and GitHub (links in the footer), or send me an email through the 'Contact' section.  
-baseurl: "/home" # My base url: Must match my repo name.
+baseurl: "/Fadil-1.github.io" # My base url: Must match my repo name.
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: /:categories/:year/:month/:day/:title/ # Structures projects in _posts so that they can be placed into sub directories.

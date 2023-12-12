@@ -62,8 +62,6 @@
       background-color: transparent;
     }
 
-
-
       .container-toggle {
       margin-top: -100px !important;
       margin-left: 0px !important;
@@ -77,7 +75,7 @@
       z-index: 1;
       overflow-x: hidden;
       padding-top: 60px;
-      margin-left: 40px;
+      margin-left: 120px;
       position: fixed;
       top: 20px;
       bottom: 45px; 
@@ -91,13 +89,13 @@
     background-color: rgba(181, 181, 181, 0.942);
   }
   .anchor-text{
-    font-size: 20px;
-    color:rgb(84, 84, 84);
+    font-size: 22px;
+    color:rgb(70, 70, 70);
   }
   .children-nav{
-    font-size: 18px;
+    font-size: 21px;
     margin-top: 20px;
-    color:rgb(84, 84, 84);
+    color:rgb(40, 40, 40);
   }
   .anchor-text:hover{
     color: rgb(0, 0, 0);
@@ -568,9 +566,21 @@
     }
     .children_category{
       font-weight: bolder;
-      font-size: 20px;
-      color: rgb(82, 82, 82);
+      font-size: 24px;
+      color: rgb(40, 40, 40);
     }
+
+    .line_category {
+      border-bottom: 1px solid #ccc;
+      margin: 10px 0;
+    }
+
+    .space_category {
+      font-weight: bolder;
+      font-size: 24px;
+      color: rgb(40, 40, 40);
+    }
+  
     @media screen and (max-width: 1025px) {
       .toggle-button {
     display: inline-block;
@@ -621,7 +631,7 @@
   
   .sidebar {
     background:#fff;
-    width: 60%;
+    width: 25%;
     position:fixed;
   
     left:-620px;
@@ -659,12 +669,12 @@
   }
   .anchor-text{
     font-size: 20px;
-    color:rgb(84, 84, 84);
+    color:rgb(70, 70, 70);
   }
   .children-nav{
     font-size: 18px;
     margin-top: 20px;
-    color:rgb(84, 84, 84);
+    color:rgb(70, 70, 70);
   }
   .anchor-text:hover{
     color: rgb(0, 0, 0);
@@ -766,12 +776,12 @@
   }
   .anchor-text{
     font-size: 20px;
-    color:rgb(84, 84, 84);
+    color:rgb(70, 70, 70);
   }
   .children-nav{
     font-size: 18px;
     margin-top: 20px;
-    color:rgb(84, 84, 84);
+    color:rgb(70, 70, 70);
   }
   .anchor-text:hover{
     color: rgb(0, 0, 0);
@@ -874,11 +884,10 @@ footer{
   padding-left: 20px; /* Space between sidebar and content */
   max-width: 1000px;
   font-size: 22px;
-
 }
 
-article {
-  max-width: 800px; 
+.article {
+  max-width: 1000px; 
   width: 100%;
-  padding-left: 20px;
+  padding-left: 18px;
 }

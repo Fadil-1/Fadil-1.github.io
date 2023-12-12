@@ -9,29 +9,29 @@
   background-size: cover;
 }
 .underline-flex::-webkit-scrollbar {
-    width: 2px;               /* width of the entire scrollbar */
+    width: 2px; /* width of the entire scrollbar */
     visibility: hidden !important;
   }
   .underline-flex:hover::-webkit-scrollbar{
-    width: 5px;               /* width of the entire scrollbar */
+    width: 5px; /* width of the entire scrollbar */
   }
   .underline-flex::-webkit-scrollbar-track {
-    background: rgb(255, 255, 255);        /* color of the tracking area */
+    background: rgb(255, 255, 255); /* color of the tracking area */
   }
   
   .underline-flex::-webkit-scrollbar-thumb {
-    background-color: rgb(8, 8, 8);    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 1px solid rgb(36, 36, 36);  /* creates padding around scroll thumb */
+    background-color: rgb(8, 8, 8); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 1px solid rgb(36, 36, 36); /* creates padding around scroll thumb */
   }
   body::-webkit-scrollbar {
-    width: 5px;               /* width of the entire scrollbar */
+    width: 5px; /* width of the entire scrollbar */
   }
   body:hover::-webkit-scrollbar{
-    width: 7px;               /* width of the entire scrollbar */
+    width: 7px; /* width of the entire scrollbar */
   }
   body::-webkit-scrollbar-track {
-    background: rgb(255, 255, 255);        /* color of the tracking area */
+    background: rgb(255, 255, 255); /* color of the tracking area */
   }
   
   body::-webkit-scrollbar-thumb {
@@ -43,32 +43,32 @@
     list-style-type: none;
   }
   @media screen and (min-width: 1026px) {
-    .container-main{
-      margin-left: 20px; /* Adjust the desired margin value */
-      display: flex !important;
-      flex-direction: column !important;
-    }
-    .sidebar, .content {
-    margin-left: 20px; /* Same value as the container's margin */
-  }
   
-      .sidebar {
-        width:40%;
-        height: calc(100vh - 70px);
-        position: fixed;
-        background-color: transparent;
-        padding-left: 20%;
-        margin-top: 70px;
-        transition: left 0.3s;
-        overflow: auto; /* Added overflow property */
-        
-      }
-     
-        .container-toggle {
+    /* Basic Flexbox Layout for Sidebar and Content */
+    .container-main {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: start;
+      padding: 20px; /* Adjust as needed */
+      margin: auto;
+
+    }
+
+    .sidebar {
+      flex: 0 0 20%; /* Adjust the width of the sidebar */
+      max-width: 200px; /* Adjust as needed */
+      position: relative; /* Adjust as needed */
+      background-color: transparent;
+    }
+
+      .container-toggle {
       margin-top: -100px !important;
       margin-left: 0px !important;
       position: fixed;
-  }
+    }
+
+    
       
       .underline-flex{
       width: 270px;
@@ -77,11 +77,11 @@
       z-index: 1;
       overflow-x: hidden;
       padding-top: 60px;
-      margin-left: 40px;
+      margin-left: 120px;
       position: fixed;
-     top: 20px;
-     bottom: 45px; /* added */
-     min-height: 0 !important; /* added */
+      top: 20px;
+      bottom: 45px; 
+      min-height: 0 !important; 
     }
   a{
     text-decoration: none !important;
@@ -91,13 +91,13 @@
     background-color: rgba(181, 181, 181, 0.942);
   }
   .anchor-text{
-    font-size: 20px;
-    color:rgb(84, 84, 84);
+    font-size: 22px;
+    color:rgb(70, 70, 70);
   }
   .children-nav{
-    font-size: 18px;
+    font-size: 21px;
     margin-top: 20px;
-    color:rgb(84, 84, 84);
+    color:rgb(40, 40, 40);
   }
   .anchor-text:hover{
     color: rgb(0, 0, 0);
@@ -143,7 +143,12 @@
         padding-left: 373px;
         padding-right: 12%;
         transition: margin-left 0.3s;
+        .content-container {
+          max-width: 1200px;
+        }
       }
+
+
       
     }
     @media screen and (min-width: 1400px) {
@@ -559,13 +564,40 @@
         transition: margin-left 0.3s;
       }
      
-      
     }
     .children_category{
-      font-weight: bolder;
-      font-size: 20px;
-      color: rgb(82, 82, 82);
+      font-weight: normal;
+      font-size: 24px;
+      color: rgb(40, 40, 40);
     }
+
+
+    .category-item {
+      font-weight: bold;
+      font-size: 20px;
+      color: rgb(40, 40, 40);
+      /* Add other styles if needed */
+    }
+
+
+    .category-line {
+      border-bottom: 1px solid #ccc;
+      margin: 10px 0;
+      width: 100%; 
+    }
+    
+
+    .category-space {
+      margin: 20px 0;
+    }
+  
+    .custom-icon {
+      width: 2em; /* Image's size */
+      height: auto;
+      vertical-align: middle;
+      margin-right: 0.025em;
+    }
+
     @media screen and (max-width: 1025px) {
       .toggle-button {
     display: inline-block;
@@ -616,7 +648,7 @@
   
   .sidebar {
     background:#fff;
-    width: 60%;
+    width: 30%;
     position:fixed;
   
     left:-620px;
@@ -632,8 +664,8 @@
     left:0;
   
   }
-      .underline-flex{
-    width: calc(60% - 20px);
+    .underline-flex{
+    /*width: calc(60% - 20px);*/
     height: 80%;
     position: fixed;
     z-index: 1;
@@ -654,12 +686,12 @@
   }
   .anchor-text{
     font-size: 20px;
-    color:rgb(84, 84, 84);
+    color:rgb(70, 70, 70);
   }
   .children-nav{
     font-size: 18px;
     margin-top: 20px;
-    color:rgb(84, 84, 84);
+    color:rgb(70, 70, 70);
   }
   .anchor-text:hover{
     color: rgb(0, 0, 0);
@@ -761,12 +793,12 @@
   }
   .anchor-text{
     font-size: 20px;
-    color:rgb(84, 84, 84);
+    color:rgb(70, 70, 70);
   }
   .children-nav{
     font-size: 18px;
     margin-top: 20px;
-    color:rgb(84, 84, 84);
+    color:rgb(70, 70, 70);
   }
   .anchor-text:hover{
     color: rgb(0, 0, 0);
@@ -854,99 +886,7 @@ footer{
   margin-top: 50px;
 }
 
-@media screen and (min-width: 3500px){
-
-  .hero {
-    margin: -1rem auto;
-    min-height: 200em;
-    width: 100%;
-    position: relative;
-    background-color: #dde5ea;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-  }
-}
-@media screen and (min-width: 4000px){
-
-  .hero {
-    margin: -1rem auto;
-    min-height: 200em;
-    width: 100%;
-    position: relative;
-    background-color: #dde5ea;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-  }
-}
-@media screen and (min-width: 4500px){
-
-  .hero {
-    margin: -1rem auto;
-    min-height: 200em;
-    width: 100%;
-    position: relative;
-    background-color: #dde5ea;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-  }
-}
-@media screen and (min-width: 5000px){
-
-  .hero {
-    margin: -1rem auto;
-    min-height: 200em;
-    width: 100%;
-    position: relative;
-    background-color: #dde5ea;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 5500px){
-
-  .hero {
-    margin: -1rem auto;
-    min-height: 200em;
-    width: 100%;
-    position: relative;
-    background-color: #dde5ea;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-  }
-}
-
-@media screen and (min-width: 6000px){
-
-  .hero {
-    margin: -1rem auto;
-    min-height: 200em;
-    width: 100%;
-    position: relative;
-    background-color: #dde5ea;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-  }
-}
-@media screen and (min-width: 6500px){
-
-  .hero {
-    margin: -1rem auto;
-    min-height: 200em;
-    width: 100%;
-    position: relative;
-    background-color: #dde5ea;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-  }
-}
+/* Settings independent of specific "@medias"*/
 
 .grey-background {
   background-color: rgb(199, 198, 198);
@@ -955,29 +895,16 @@ footer{
   border-radius: 5px;
 }
 
-
-.content-container {
-  max-width: 800px;
-  margin-left: auto;  
-  margin-right: auto;
-  padding: 0 20px;
+.content {
+  flex: 1;
+  padding-left: 20px; /* Space between sidebar and content */
+  max-width: 1000px;
+  font-size: 22px;
 }
 
 
-/*.content-container {
-  max-width: 800px;
-  margin-left: 15px; /* Adjust this value to your preference 
-  margin-right: 0; /* Adjust 16px if needed 
-  padding: 0 20px;
-}
-
-.container-main {
-  display: flex;
-  justify-content: center;
-}
-
-article {
-  max-width: 800px; /* or whatever maximum width you prefer 
+.article {
+  max-width: 1000px; 
   width: 100%;
+  padding-left: 18px;
 }
-*/

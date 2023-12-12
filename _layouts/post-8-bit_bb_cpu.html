@@ -29,23 +29,38 @@ layout: compress
       {% for items in site.posts %}
         {% if items.similar == "8-bit_bb_cpu" and items.category == "parent" %}
           <div>
-            <a class="anchor-text" id="nav-link" href="{{ items.url | relative_url }}">
+            <a class="anchor-text" href="{{ items.url | relative_url }}">
               <b>{{ items.title }}</b>
             </a>
           </div>
           <br>
           <h2>{{ items.overview }}</h2>
           {% for i in items.parent_nav %}
-            <li class="children_category">
-              {{i.category}}
-            </li>
-              <a class="children-nav" id="nav-link" href="{{ i.permalink | relative_url }}">{{ i.name }}</a>
-            </li>
+            {% if i.type == 'line' %}
+              <li class="category-line"></li>
+            {% elsif i.type == 'space' %}
+              <li class="category-space"></li>
+            {% elsif i.category %}
+              <li class="category-item">
+                {% if i.icon %}
+                  <img src="{{ site.baseurl }}{{ i.icon }}" class="custom-icon" alt="{{ i.category }} Icon">
+                {% endif %}
+                {{ i.category }}
+              </li>
+            {% else %}
+              <li class="name-item">
+                {% if i.icon %}
+                  <img src="{{ site.baseurl }}{{ i.icon }}" class="custom-icon" alt="{{ i.name }} Icon">
+                {% endif %}
+                <a class="children-nav" href="{{ i.permalink | relative_url }}">{{ i.name }}</a>
+              </li>
+            {% endif %}
           {% endfor %}
         {% endif %}
       {% endfor %}
     </div>
   </div>
+
   
   <!-- Main content -->
   <div id="content" class="content">

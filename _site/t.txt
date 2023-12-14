@@ -1,0 +1,5 @@
+  Hello, I'm Fadil. 
+  I'm a Master's CS student at the Johns Hopkins University. This is my personal website. 
+  Here I mainly post projects that I've undertaken along with tutorial-like documentation. 
+  I'm always eager to connect, so if you'd like to discuss projects, share ideas, or simply say hello,
+  feel free to reach out! Connect with me on LinkedIn and GitHub (links in the footer), or send me an email through the 'Contact' section.

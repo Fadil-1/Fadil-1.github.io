@@ -1,0 +1,106 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
+
+{% include head.html %}
+
+<body class="site">
+
+{% include header.html %}
+<header class="container-toggle" id="container-toggle">
+  <button id="myButton" class="my-button toggle">
+    <span id="toggleButton" class="toggle-button">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </span>
+  </button>
+</header>
+<br>
+<br>
+
+<div class="container-main">
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <!-- Sidebar content -->
+    <div class="underline-flex">
+      {% for items in site.posts %}
+        {% if items.similar == "8-bit_breadboard_CPU" and items.category == "parent" %}
+          <!-- ... other content ... -->
+          {% for i in items.parent_nav %}
+            {% if i.type == 'line' %}
+              <li class="category-line"></li>
+            {% elsif i.type == 'space' %}
+              <li class="category-space"></li>
+            {% elsif i.category %}
+              <li class="category-item">
+                {% if i.small_icon %}
+                  <img src="{{ site.baseurl }}{{ i.small_icon }}" class="small-custom-icon" alt="{{ i.category }} Icon">
+                {% elsif i.icon %}
+                  <img src="{{ site.baseurl }}{{ i.icon }}" class="custom-icon" alt="{{ i.category }} Icon">
+                {% endif %}
+                {{ i.category }}
+              </li>
+            {% else %}
+              <li class="name-item">
+                {% if i.small_icon %}
+                  <img src="{{ site.baseurl }}{{ i.small_icon }}" class="small-custom-icon" alt="{{ i.name }} Icon">
+                {% elsif i.icon %}
+                  <img src="{{ site.baseurl }}{{ i.icon }}" class="custom-icon" alt="{{ i.name }} Icon">
+                {% endif %}
+                <a class="children-nav" href="{{ i.permalink | relative_url }}">{{ i.name }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  
+  <!-- Main content -->
+  <div id="content" class="content">
+    <article>
+      <div class="content-container">
+        <!-- Main content goes here -->
+        {{ content }}
+      </div>
+      <!-- Additional content if needed -->
+      {% for items in site.posts %}
+        {% if items.similar == "8-bit_breadboard_CPU" and items.category == "parent" %}
+          <!-- Content based on condition -->
+        {% endif %}
+      {% endfor %}
+      <h4>
+        <a style="color: rgb(90, 90, 90);" href="#">back to top</a>
+      </h4>
+    </article>
+  </div>
+</div>
+
+{% include footer.html %}
+
+<script>
+  const toggleButton = document.getElementById('toggleButton');
+  toggleButton.addEventListener('click', function() {
+    toggleButton.classList.toggle('active');
+  });
+
+  var btn = document.querySelector('.toggle');
+  var btnst = true;
+  btn.onclick = function() {
+    if(btnst == true) {
+      document.querySelector('.toggle span').classList.add('toggle');
+      document.getElementById('sidebar').classList.add('sidebarshow');
+      btnst = false;
+    } else if(btnst == false) {
+      document.querySelector('.toggle span').classList.remove('toggle');
+      document.getElementById('sidebar').classList.remove('sidebarshow');
+      btnst = true;
+    }
+  }
+</script>
+</body>
+</html>

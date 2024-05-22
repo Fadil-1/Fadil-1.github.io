@@ -1,0 +1,4 @@
+ROM: https://pixabay.com/vectors/rom-microchip-memory-storage-30098/
+RAM: https://pixabay.com/vectors/memory-chip-ram-microchip-38404/
+Programmer:https://slackmojis.com
+Segmented Display: https://github.com/dmadison/LED-Segment-ASCII/blob/master/Images/All%20Characters/14-Segment-ASCII-All.png

@@ -328,4 +328,4 @@ So now I know for sure that the low phase can be as short as $346ns$; and since 
 
 <a href="{{ site.baseurl }}{% link _posts/8-bit_breadboard_CPU/2023-05-27-buses_&_gprs.md %}"><span class="wide-space"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Next Post:  Bus & General Purpose Registers     >>>>>>>>>>>>>>>>>>>>**</a>
 
-<i class="fas fa-calendar-alt"></i> <span style="font-size: 15px; font-weight: bolder;">Updated:  </span><time>March 31, 2024</time>
+<i class="fas fa-calendar-alt"></i> <span style="font-size: 15px; font-weight: bolder;">Updated:  </span><time>May 21, 2024</time>

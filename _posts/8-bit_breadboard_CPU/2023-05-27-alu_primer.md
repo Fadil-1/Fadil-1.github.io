@@ -337,4 +337,4 @@ Rotate Right: `1101` (13)
 
 <a href="{{ site.baseurl }}{% link _posts/8-bit_breadboard_CPU/2023-05-27-alu_&_flags.md %}"><span class="wide-space"></span><span class="wide-space"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Next Post: ALU & Flags     >>>>>>>>>>>>>>>>>>>>**</a>
 
-<i class="fas fa-calendar-alt"></i> <span style="font-size: 15px; font-weight: bolder;">Updated:  </span><time>March 31, 2024</time>
+<i class="fas fa-calendar-alt"></i> <span style="font-size: 15px; font-weight: bolder;">Updated:  </span><time>May 21, 2024</time>

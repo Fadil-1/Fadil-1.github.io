@@ -166,4 +166,4 @@ The initialization sequence below, among many things, mainly clears any residual
 
 [**<<<<<<<<<<<<<<<<<<<< Previous Post: Instructions**]({{ site.baseurl }}{% link _posts/8-bit_breadboard_CPU/2023-05-27-instructions.md %})
 
-<i class="fas fa-calendar-alt"></i> <span style="font-size: 15px; font-weight: bolder;">Updated:  </span><time>March 31, 2024</time>
+<i class="fas fa-calendar-alt"></i> <span style="font-size: 15px; font-weight: bolder;">Updated:  </span><time>May 21, 2024</time>

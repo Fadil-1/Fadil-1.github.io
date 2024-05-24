@@ -1,7 +1,7 @@
 ---
 layout: 8-bit_breadboard_CPU
 title: 8-bit Breadboard CPU
-featured-img: 8-bit_bb_cpu.png
+featured-img: 8-bit_bb_cpu.jpeg
 mathjax: true
 overview: Table of Contents
 date_parent: "May 27, 2023"
